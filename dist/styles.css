@@ -3,3 +3,159 @@
   padding: 0;
   margin: 0;
 }
+
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+/*_________________ Headers _________________*/
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  /* background: gray; */
+}
+
+/* .logo{
+  width: 100px;
+  height: 100px;
+} */
+
+.logo img{
+  width: 100px;
+  height: 100px;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul a{
+  text-decoration: none;
+  color: black;
+}
+
+main{
+  margin: 20px;
+}
+
+/*_________________ FIRST SECTION __________________ */
+
+.welcome-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: auto;
+}
+
+.heading-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.first-heading h1{
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.second-heading h3{
+  font-weight: lighter;
+}
+
+/* ________________ ABOUT SECTION _________________ */
+
+.about-page{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: auto;
+}
+
+.first-half{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.first-half h1 {
+  font-size: 2rem;
+}
+
+.first-half p {
+  text-align: justify;
+}
+
+.second-half{
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.second-half img{
+  width: 40%;
+  height: 100%;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+/* ________________ SKILLS SECTION _________________ */
+
+.skills-page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: auto;
+}
+
+.skill-title{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skill-title h1 {
+  font-size: 2rem;
+}
+
+.skills-list{
+  margin: 40px;
+}
+
+.skills-list ul{
+  display: flex;
+  gap: 40px;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  text-decoration: none;
+}
+
+.skill-1, .skill-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: aquamarine;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.skill-1 img, .skill-2 img {
+  width: 3rem;
+}
