@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/src/assets/self-logo.png">
     <link rel="stylesheet" href="styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,42 +13,40 @@
   <body>
     <header>
       <div class="logo">
-        <a href="#"><img src="/src/assets/self-logo.png" alt=""></a>
+        <a href="."><img src="/src/assets/self-logo.png" alt=""></a>
       </div>
-      <div>
+      <div class="nav-links">
         <nav>
             <ul>
               <!-- <li><a href="">Home</a></li> -->
-              <li><a href="">About</a></li>
-              <li><a href="">Skills</a></li>
-              <li><a href="">Experience</a></li>
-              <li><a href="">Projects</a></li>
-              <li><a href="">Education</a></li>
-              <li><a href="">Contact</a></li> 
+              <li><a href="#about-page-id">ABOUT</a></li>
+              <li><a href="#skills-page-id">SKILLS</a></li>
+              <li><a href="#experience-page-id">EXPERIENCE</a></li>
+              <li><a href="#projects-page-id">PROJECTS</a></li>
+              <li><a href="#education-page-id">EDUCATION</a></li>
+              <li><a href="#contact-page-id">CONTACT</a></li> 
             </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section class="welcome-page">
+      <section class="welcome-page" id="welcome-page-id">
         <div class="first-heading">
-          <h1>Hello, I am Ciel Dean!</h1>
+          <h1>Hello, I am <span>Ciel Dean!</span></h1>
         </div>
         <div class="second-heading">
           <h3>Aspiring Graphic, Web, or UI/UX Designer!</h3>
         </div>
         <div class="heading-buttons">
           <div class="resume">
-            <img src="" alt="" class="resume-logo">
-            <p>Resume</p>
+            <button><a href="/src/assets/Resume-Current.pdf" target="_blank">Resume</a></button>
           </div>
           <div class="contact">
-            <img src="" alt="" class="resume-logo">
-            <p>Contact</p>
+            <button>Contact</button>
           </div>
         </div>
       </section>
-      <section class="about-page">
+      <section class="about-page" id="about-page-id">
         <div class="first-half">
           <h1>ABOUT</h1>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, quo praesentium. Nulla sequi vel fugiat, aliquam adipisci dolor ea facere ipsa ratione nisi voluptatem doloribus. Dolorum magni earum perspiciatis optio?
@@ -58,7 +57,7 @@
           <img src="/src/assets/Profile.png" alt="" class="self-photo">
         </div>
       </section>
-      <section class="skills-page">
+      <section class="skills-page" id="skills-page-id">
         <div class="skill-title">
           <h1>SKILLS</h1>
           <p>Technologies and Tools</p>
@@ -140,7 +139,7 @@
           </ul>
         </div>
       </section>
-      <section class="experience-page">
+      <section class="experience-page" id="experience-page-id">
         <h1>EXPERIENCE</h1>
         <div class="timeline">
           <div class="container left">
@@ -151,7 +150,7 @@
                 <p>Date</p>
               </div>
               <div class="exp-description">  
-                <p>Description: Summary ng ginawa ko </p>
+                <p>Description: Summary ng ginawa ko  </p>
               </div>
               <div class="second-content">
                 <h4>Activities</h4>
@@ -213,69 +212,101 @@
 
         </div>
       </section>
-      <section class="projects-page">
+      <section class="projects-page" id="projects-page-id">
         <h1>PROJECTS</h1>
-        <div class="projects-left">
-          <div class="modal">
-
+        <div class="projects-container">
+          <div class="projects-left project">
+            <div class="modal">
+              <img src="/src/assets/design-project1.png" alt="" class="project-design">
+            </div>
+            <div class="modal-info">
+              <h4>Type of Design</h4>
+              <p>Title</p>
+              <p>Short Description</p>
+            </div>
           </div>
-          <div class="modal-info">
-            <h4>Type of Design</h4>
-            <p>Title</p>
-            <p>Short Description</p>
-          </div>
-        </div>
-        <div class="projects-right">
-          <div class="modal">
-
-          </div>
-          <div class="modal-info">
-            <h4>Type of Design</h4>
-            <p>Title</p>
-            <p>Short Description</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="education">
-        <div class="educ-left">
-          <div class="educ-logo">
-
-          </div>
-          <div class="educ-info">
-            <p>Degree:<br>
-            Bachelor of Science in Computer Science</p>
-            <p>2019-2023<br>
-            Batangas State University (Lipa)</p>
-          </div>
-        </div>
-        <div class="educ-right">
-          <div class="educ-logo">
-
-          </div>
-          <div class="educ-info">
-            <p>Strand:<br>
-            Science, Technology, Engineering, and Mathematics</p>
-            <p>2019-2023<br>
-            Batangas State University (Lipa)</p>
+          <div class="projects-right project">
+            <div class="modal">
+              <img src="/src/assets/design-project1.png" alt="" class="project-design">
+            </div>
+            <div class="modal-info">
+              <h4>Type of Design</h4>
+              <p>Title</p>
+              <p>Short Description</p>
+            </div>
           </div>
         </div>
       </section>
 
+      <section class="education-page" id="education-page-id">
+        <h1>EDUCATION</h1>
+        <div class="educ-container">
+          <div class="educ-left">
+            <div class="educ-logo">
+              <img src="/src/assets/college-logo.png" alt="">
+            </div>
+            <div class="educ-info">
+              <p>Degree:
+              Bachelor of Science in Computer Science</p>
+              <p>2019-2023</p>
+              <p>Batangas State University (Lipa)</p>
+            </div>
+          </div>
+          <div class="educ-right">
+            <div class="educ-logo">
+              <img src="/src/assets/shs-logo.png" alt="">
+            </div>
+            <div class="educ-info">
+              <p>Strand:
+              Science, Technology, Engineering, and Mathematics</p>
+              <p>2019-2023</p>
+              <p></p>Batangas State University (Lipa)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- 
       <section class="certificates">
+        <h1>CERTIFICATES</h1>
         <div class="carousel">
-
-        </div>
-      </section>
-
-      <section class="contact">
-        <div class="first-contact">
-          <div class="contact-logo">
+          <div class="first">
+            
+          </div>
+          <div class="second">
 
           </div>
-          <div class="contact-info">
-            <p>Social Media Name</p>
-            <h4>Email</h4>
+        </div>
+      </section> -->
+
+      <section class="contact-page" id="contact-page-id">
+        <h1>CONTACT</h1>
+        <div class="contacts">
+          <div class="first-contact contact-detail">
+            <div class="contact-logo">
+              <img src="/src/assets/email-logo.svg" alt="">
+            </div>
+            <div class="contact-info">
+              <p>Send me an email:</p>
+              <h4>variascieldean@gmail.com</h4>
+            </div>
+          </div>
+          <div class="second-contact contact-detail">
+            <div class="contact-logo">
+              <img src="/src/assets/linkedin-logo.svg" alt="">
+            </div>
+            <div class="contact-info">
+              <p>My Linkedln Account</p>
+              <h4>/in/cieldeanvarias</h4>
+            </div>
+          </div>
+          <div class="second-contact contact-detail">
+            <div class="contact-logo">
+              <img src="/src/assets/fb-logo.svg" alt="">
+            </div>
+            <div class="contact-info">
+              <p>My Facebook Account</p>
+              <h4>@variascid</h4>
+            </div>
           </div>
         </div>
       </section>
@@ -283,14 +314,19 @@
     <footer>
       <div class="footer">
         <div class="footer-left">
-
+          <img src="/src/assets/self-logo.png" alt="">
         </div>
         <div class="footer-center">
-          
+          <p><i>Once again, Welcome to my Portfolio!</i></p>
         </div>
-        <div class="footer-right">
-          
-        </div>
+        <span>
+          <div class="footer-right">
+            <button class = "gotopbtn" id="gotopbtn-id">↑</button>
+          </div>
+        </span>
+      </div>
+      <div class="footer-copyright">
+        <small>©</small>2024 by Ciel Dean Varias
       </div>
     </footer>
     <script src="main.js"></script>

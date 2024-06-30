@@ -1,7 +1,18 @@
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+:root{
+  --blue: #2a7fffff;
+  --gold: #CCB866;
+  --grayish-blue: #4D5987;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 4em;
 }
 
 body{
@@ -14,18 +25,19 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 20px;
-  /* background: gray; */
+  max-width: 1400px;
+  margin-inline: auto;
+  border-bottom: 2px solid var(--gold);
 }
 
-/* .logo{
-  width: 100px;
-  height: 100px;
-} */
-
 .logo img{
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  transition: transform 0.6s;
+}
+
+.logo img:hover{
+  transform: scale(1.2);
 }
 
 nav ul{
@@ -33,21 +45,43 @@ nav ul{
   list-style: none;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  margin-right: 1em;
 }
 
 nav ul a{
   text-decoration: none;
+  /* color: var(--grayish-blue); */
   color: black;
+  position: relative;
+  font-weight: 500;
+}
+
+nav ul a::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--blue);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+  bottom: 0;
+  left: 0;
+}
+
+nav ul a:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 main{
-  /* margin: 20px; */
   max-width: 1320px;
   margin-inline: auto;
 }
 
-/*_________________ FIRST SECTION __________________ */
+/*_________________ WELCOME SECTION __________________ */
 
 .welcome-page{
   display: flex;
@@ -56,22 +90,47 @@ main{
   justify-content: center;
   height: 100vh;
   width: auto;
+  gap: 20px;
 }
 
 .heading-buttons{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
 }
 
+.heading-buttons div button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.resume button a{
+  text-decoration: none;
+  color: white;
+}
+
+.heading-buttons div button:hover{
+  transform: scale(1.2);
+} 
+
+
 .first-heading h1{
   font-size: 50px;
-  padding-bottom: 20px;
 }
 
 .second-heading h3{
-  font-weight: lighter;
+  font-weight: 500;
+}
+
+.first-heading h1 span {
+  color: var(--blue);
 }
 
 /* _________________ ABOUT SECTION _________________ */
@@ -80,7 +139,7 @@ main{
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 100vh;
+  min-height: 100vh;
   width: auto;
 }
 
@@ -119,7 +178,7 @@ main{
 .skills-page{
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  min-height: 100vh;
   width: auto;
 }
 
@@ -134,7 +193,7 @@ main{
 }
 
 .skills-list{
-  margin: 40px;
+  margin-top: 40px;
 }
 
 .skills-list ul{
@@ -162,7 +221,6 @@ main{
   max-width: 5rem;
 }
 
-
 .skills img {
   width: 50%;
 }
@@ -177,9 +235,10 @@ main{
 .experience-page{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 120vh;
   width: auto;
   gap: 40px;
+  margin-inline: auto;
 }
 
 .experience-page h1{
@@ -189,8 +248,6 @@ main{
 /* the timeline (need ng relative position ng container for the ruler mismo) */
 .timeline{
   position: relative;
-  max-width: 1200px;
-  /* margin: 0 auto; */
 }
 
 /* the actual timeline (ruler mismo) */
@@ -209,6 +266,7 @@ main{
 .container{
   position: relative;
   margin-bottom: 5em;
+  width: auto;
 }
 
 /* the actual container (circles mismo) */
@@ -217,11 +275,12 @@ main{
   position: absolute;
   width: 30px;
   min-height: 30px;
-  left: 36.65em;
+  /* left: 40.4em; */
+  left: 49%;
   background-color: white;
   border: 4px solid black;
   border-radius: 50%;
-  top: 0px;
+  top: 0;
   z-index: 1;
 }
 
@@ -231,7 +290,6 @@ main{
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 
 .container.right{
   display: flex;
@@ -247,6 +305,10 @@ main{
   justify-content: space-around;
   gap: 20px;
   max-width: 49%;
+}
+
+.left .content{
+  flex: 1;
 }
 
 .right .content{
@@ -272,7 +334,11 @@ main{
 }
 
 .logo-container.logo-right{
-  margin-right: 29em; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  padding-left: 7rem;
 }
 
 .logo-container.logo-left{
@@ -280,7 +346,7 @@ main{
   justify-content: flex-end;
   align-items: flex-start;
   flex: 1;
-  padding-right: 5rem;
+  padding-right: 3.6rem;
 }
 
 .logo-container img {
@@ -289,5 +355,195 @@ main{
   border-radius: 30%;
 }
 
+/* _________________ PROJECT SECTION _________________ */
+
+.projects-page{
+  min-height: 120vh;
+  width: auto;
+}
+
+.projects-page h1{
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.projects-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 1em;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.modal img {
+  width: 100%;
+  max-width: 24rem;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+/* .project-design{
+  border-radius: 15px;
+} */
+
+.project{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-info h4{
+  font-size: 1.5rem;
+}
+
+/* _________________ EDUCATION SECTION _________________ */
+
+.education-page{
+  min-height: 60vh;
+  width: auto;
+}
+
+.education-page h1{
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.educ-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.educ-left, .educ-right{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.educ-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.educ-logo img{
+  max-width: 5rem;
+  width: 100%;
+}
+
+/* _________________ CERTIFICATE SECTION _________________ */
+
+/* .certificates{
+  min-height: 40vh;
+  width: auto;
+}
+
+.certificates h1{
+  font-size: 2rem;
+  margin-bottom: 40px;
+} */
+
+/* _________________ CONTACT SECTION _________________ */
+
+.contact-page{
+  min-height: 40vh;
+  width: auto;
+}
+
+.contact-page h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.contacts{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts img {
+  max-width: 3rem;
+}
+
+.contact-detail{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
 
+/* _________________ FOOTER SECTION _________________ */
+
+footer{
+  border-top: 1px solid black;
+}
+
+.footer{
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20vh;
+}
+
+.footer-left{
+  display: flex;
+  align-items: center;
+}
+
+
+.footer-left img {
+  max-width: 5rem;
+}
+
+.gotopbtn{
+  /* general styles */
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 50px;
+  width: 50px;
+
+  /* place it at the bottom-right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  /* keep it at the top of everything */
+  z-index: 100;
+
+  /* hide with opacity */
+  opacity: 0;
+
+  /* also add a effect */
+  transform: translateY(100px);
+
+  /* and a transition */
+  transition:  all .5s ease;
+}
+
+.showBtn{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-copyright{
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+}
