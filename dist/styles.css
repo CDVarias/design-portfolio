@@ -28,6 +28,7 @@ header{
   max-width: 1400px;
   margin-inline: auto;
   border-bottom: 2px solid var(--gold);
+
 }
 
 .logo img{
@@ -138,38 +139,45 @@ main{
 .about-page{
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  flex-direction: column;
   min-height: 100vh;
   width: auto;
+  gap: 40px;
+}
+
+.about-title h1 {
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.about-info{
+  display: flex;
+  align-items: flex-start;
 }
 
 .first-half{
   display: flex;
+  flex: 1;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
   gap: 40px;
 }
 
-.first-half h1 {
-  font-size: 2rem;
-}
-
 .first-half p {
   text-align: justify;
+  line-height: 1.5;
 }
 
 .second-half{
-  max-width: 100%;
-  min-height: 100%;
   display: flex;
+  flex: 1;
   justify-content: center;
 }
 
 .second-half img{
-  width: 40%;
-  height: 100%;
-  border: 5px solid black;
+  max-width: 40%;
+  min-height: 100%;
+  background-color: var(--gold);
   border-radius: 10px;
 }
 
@@ -178,7 +186,7 @@ main{
 .skills-page{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vh;
   width: auto;
 }
 
@@ -190,6 +198,11 @@ main{
 
 .skill-title h1 {
   font-size: 2rem;
+  color: var(--blue);
+}
+
+.skill-title p {
+  font-weight: 500;
 }
 
 .skills-list{
@@ -207,11 +220,11 @@ main{
 }
 
 .skills-list li {
-  border: 5px solid black;
+  background-color: var(--grayish-blue);
   border-radius: 10px;
 }
 
-.skills {
+.skills{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,6 +241,8 @@ main{
 .skills p {
   font-size: 0.8rem;
   text-align: center;
+  color: white;
+  font-weight: 500;
 }
 
 /* _________________ EXPERIENCE SECTION _________________ */
@@ -235,7 +250,7 @@ main{
 .experience-page{
   display: flex;
   flex-direction: column;
-  min-height: 120vh;
+  min-height: 160vh;
   width: auto;
   gap: 40px;
   margin-inline: auto;
@@ -243,19 +258,23 @@ main{
 
 .experience-page h1{
   font-size: 2rem;
+  color: var(--blue);
 }
 
 /* the timeline (need ng relative position ng container for the ruler mismo) */
 .timeline{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 /* the actual timeline (ruler mismo) */
 .timeline::after{
   content: '';
   position: absolute;
-  width: 10px;
-  background-color: black;
+  width: 5px;
+  background-color: var(--grayish-blue);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -265,7 +284,7 @@ main{
 /* the container (container para dun sa circles tyaka dun sa content mismo para kapag nagadd ng another set of info may circle din kasama */
 .container{
   position: relative;
-  margin-bottom: 5em;
+  /* margin-bottom: 10em; */
   width: auto;
 }
 
@@ -273,12 +292,12 @@ main{
 .container::after{
   content: '';
   position: absolute;
-  width: 30px;
-  min-height: 30px;
+  width: 40px;
+  min-height: 40px;
   /* left: 40.4em; */
-  left: 49%;
-  background-color: white;
-  border: 4px solid black;
+  left: 48.7%;
+  background-color: var(--gold);
+  /* border: 4px solid black; */
   border-radius: 50%;
   top: 0;
   z-index: 1;
@@ -304,7 +323,17 @@ main{
   flex-direction: column;
   justify-content: space-around;
   gap: 20px;
-  max-width: 49%;
+  max-width: 50%;
+}
+
+.first-content{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.first-content p{
+  font-size: 0.8rem ;
 }
 
 .left .content{
@@ -320,9 +349,37 @@ main{
   font-size: 1.5rem;
 }
 
-.content ul {
+.second-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.second-content ul {
+  margin-left: 20px;
+  line-height: 2;
+  text-decoration: none;
+}
+
+
+.third-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exp-tech ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   list-style: none;
   text-decoration: none;
+  text-align: center;
+}
+
+.exp-tech img{
+  max-width: 3rem;
 }
 
 .exp-description{
@@ -350,8 +407,9 @@ main{
 }
 
 .logo-container img {
-  max-width: 5rem;
-  border: 5px solid black;
+  max-width: 6rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 30%;
 }
 
@@ -360,11 +418,14 @@ main{
 .projects-page{
   min-height: 120vh;
   width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .projects-page h1{
   font-size: 2rem;
-  margin-bottom: 40px;
+  color: var(--blue);
 }
 
 .projects-container{
@@ -374,16 +435,22 @@ main{
   flex-wrap: wrap;
 }
 
-.modal{
+.modal-thumbnail{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3em 1em;
   background-color: black;
   border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.5s;
 }
 
-.modal img {
+.modal-thumbnail:hover{
+  transform: scale(1.1);
+}
+
+.modal-thumbnail img {
   width: 100%;
   max-width: 24rem;
   border: 5px solid black;
@@ -400,8 +467,49 @@ main{
   gap: 20px;
 }
 
-.modal-info h4{
+.modal-desc h4{
   font-size: 1.5rem;
+}
+
+
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+  background-color: var(--grayish-blue);
+  margin-inline: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-info{
+  display: flex;
+  
+}
+
+.close{
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus{
+  color: green;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* _________________ EDUCATION SECTION _________________ */

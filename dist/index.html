@@ -13,7 +13,7 @@
   <body>
     <header>
       <div class="logo">
-        <a href="."><img src="/src/assets/self-logo.png" alt=""></a>
+        <a href="index.html"><img src="/src/assets/self-logo.png" alt=""></a>
       </div>
       <div class="nav-links">
         <nav>
@@ -47,14 +47,19 @@
         </div>
       </section>
       <section class="about-page" id="about-page-id">
-        <div class="first-half">
+        <div class="about-title">
           <h1>ABOUT</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, quo praesentium. Nulla sequi vel fugiat, aliquam adipisci dolor ea facere ipsa ratione nisi voluptatem doloribus. Dolorum magni earum perspiciatis optio?
-          Deleniti nam fugit pariatur doloribus atque hic aspernatur nobis eius, alias amet, illo minus molestias dicta? Doloribus, tempore non. Quas numquam porro voluptatibus dolore tempore sed, veniam rem vitae eius?
-          Aut id dolores asperiores minima cum! Sapiente illum labore provident assumenda molestias illo, pariatur consequuntur ratione. Saepe, dicta molestiae. Saepe similique id officia nulla est ab? Dolor saepe perspiciatis praesentium.</p>
         </div>
-        <div class="second-half">
-          <img src="/src/assets/Profile.png" alt="" class="self-photo">
+        <div class="about-info">
+          <div class="first-half">
+            <p> I received my bachelor's degree in computer science from Batangas State University. As a student of computer science, my interest in technologies makes me detail-oriented and has helped me develop a problem-solving mindset. My soft skills improved as well from experiencing  internship and group projects throughout my journey to make me adaptable and cooperative.</p>
+  
+            <p> Looking forward, As vast as the technology used in the world right now, I am kinda leaning towards designing because it helps me to be more creative and in a way to solve problems in understanding the needs and different perspectives that impacts people. As a student, I was mostly assigned in designing in group projects and even in the internship. </p>
+            
+          </div>
+          <div class="second-half">
+            <img src="/src/assets/Profile.png" alt="" class="self-photo">
+          </div>
         </div>
       </section>
       <section class="skills-page" id="skills-page-id">
@@ -92,6 +97,12 @@
               <div class="skills">
                 <img src="/src/assets/vscode logo.svg" alt="">
                 <p>VS Code</p>
+              </div>
+            </li>
+            <li>
+              <div class="skills">
+                <img src="/src/assets/vegas-pro.svg" alt="">
+                <p>Vegas Pro</p>
               </div>
             </li>
             <li>
@@ -145,28 +156,30 @@
           <div class="container left">
             <div class="content">
               <div class="first-content">
-                <h4>Job Position</h4>
-                <p>Company</p>
-                <p>Date</p>
+                <h4>Student Intern</h4>
+                <p>CREOTEC Philippines Inc</p>
+                <p><i>June 2022 -- August 2022</i></p>
               </div>
               <div class="exp-description">  
-                <p>Description: Summary ng ginawa ko  </p>
+                <p>I worked at CREOTEC Philippines Inc. for on-the-job training. Developed a mobile application that allows users to search for a school in a specific location. I mostly worked on designing the assets that were used for the project.</p>
               </div>
               <div class="second-content">
                 <h4>Activities</h4>
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Group Development of mobile application with the use of C# and Unity.</li>
+                  <li>User Interface Design with Figma and Canva.</li>
+                  <li>Created video presentations with the use of Canva and Vegas Pro.</li>
                 </ul>
               </div>
               <div class="third-content">
                 <h4>Technologies</h4>
                 <div class="exp-tech">
                   <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><img src="/src/assets/c-sharp.svg" alt=""><p>C-Sharp</p></li>
+                    <li><img src="/src/assets/unity.svg" alt=""><p>Unity</p></li>
+                    <li><img src="/src/assets/figma logo.svg" alt=""><p>Figma</p></li>
+                    <li><img src="/src/assets/canva logo colored.svg" alt=""><p>Canva</p></li>
+                    <li><img src="/src/assets/vegas-pro.svg" alt=""><p>Vegas Pro</p></li>
                   </ul>
                 </div>
               </div>
@@ -182,22 +195,21 @@
             </div>
             <div class="content">
               <div class="first-content">
-                <h4>Job Position</h4>
-                <p>Company</p>
-                <p>Date</p>
+                <h4>Student Trainee</h4>
+                <p>CREOTEC Philippines Inc</p>
+                <p><i>2019</i></p>
               </div>
               <div class="exp-description">
-                <p>Description: Summary ng ginawa ko  </p>
+                <p>I worked at CREOTEC Philippines Inc. for the Senior High School Immersion Program. I learned about first-hand experience working hands-on on the given tasks. Knowing the importance of being responsible and following the given rules and regulations on the work premises.  </p>
               </div>   
               <div class="second-content">
                 <h4>Activities</h4>
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Completed a work immersion program, gaining valuable hands-on experience in assembly line tasks.</li>
+                  <li>Group video presentation for the documentation during the immersion program.</li>
                 </ul>
               </div>
-              <div class="third-content">
+              <!-- <div class="third-content">
                 <h4>Technologies</h4>
                 <div class="exp-tech">
                   <ul>
@@ -206,7 +218,7 @@
                     <li></li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -216,23 +228,59 @@
         <h1>PROJECTS</h1>
         <div class="projects-container">
           <div class="projects-left project">
-            <div class="modal">
+            <div class="modal-thumbnail" id="modal-thumbnail-id">
               <img src="/src/assets/design-project1.png" alt="" class="project-design">
             </div>
-            <div class="modal-info">
+            <div class="modal-desc">
               <h4>Type of Design</h4>
               <p>Title</p>
               <p>Short Description</p>
             </div>
           </div>
+          <div class="modal" id="modal-id">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-info">
+                <div class="modal-left">
+                  <p>Carousel</p>
+                </div>
+                <div class="modal-right">
+                  <h1>Title</h1>
+                  <p>Description</p>
+                  <p>Technologies</p>
+                  <ul>
+                    <li><img src="" alt=""><p></p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="projects-right project">
-            <div class="modal">
+            <div class="modal-thumbnail" id="modal-thumbnail-id">
               <img src="/src/assets/design-project1.png" alt="" class="project-design">
             </div>
-            <div class="modal-info">
+            <div class="modal-desc">
               <h4>Type of Design</h4>
               <p>Title</p>
               <p>Short Description</p>
+            </div>
+          </div>
+          <div class="modal" id="modal-id">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-info">
+                <div class="modal-left">
+                  <p>Carousel</p>
+                </div>
+                <div class="modal-right">
+                  <h1>Title</h1>
+                  <p>Description</p>
+                  <p>Technologies</p>
+                  <ul>
+                    <li><img src="" alt=""><p></p></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
