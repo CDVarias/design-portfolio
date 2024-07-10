@@ -12,7 +12,8 @@
     "rules": {
       "no-console": "off",
       "quotes": ["error", "double"],
-      "no-unused-vars": "off"
+      "no-unused-vars": "off",
+      "no-use-before-define":"off"
     }
   }
   

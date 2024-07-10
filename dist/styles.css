@@ -108,17 +108,19 @@ main{
   border-radius: 10px;
   border: none;
   font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
   transition: transform 0.5s;
 }
 
-.resume button a{
+.heading-buttons button a{
   text-decoration: none;
   color: white;
 }
 
 .heading-buttons div button:hover{
   transform: scale(1.2);
+  background-color: var(--gold);
 } 
 
 
@@ -378,9 +380,17 @@ main{
   text-align: center;
 }
 
-.exp-tech img{
-  max-width: 3rem;
+.exp-tech li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.exp-tech img{
+  width: 3rem;
+}
+
 
 .exp-description{
   width: 100%;
@@ -471,43 +481,142 @@ main{
   font-size: 1.5rem;
 }
 
-
-
 .modal{
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 70px;
+  padding-bottom: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  /* overflow: auto; */
   background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content{
   background-color: var(--grayish-blue);
   margin-inline: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  /* padding: 1em; */
+  max-width: 80%;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .modal-info{
   display: flex;
-  
+  align-items: normal;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+.modal-left{
+  position: relative;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  background-color: white;
+  border-radius: inherit;
+}
+
+
+.carousel-container{
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  background-color: var(--blue);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.counter{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid red;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  transition: transform 0.6s ease;
+  user-select: none;
+}
+
+.prev{
+  position: absolute;
+  left: 0;
+}
+
+.next{
+  position: absolute;
+  right: 0;
+}
+
+.prev:hover, .next:hover{
+  transform: scale(1.5);
+}
+
+.prev img, .next img{
+  max-width: 2rem;
+}
+
+.mySlides{
+  visibility: hidden;
+  opacity: 0.5;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mySlides.active{
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+}
+
+ .mySlides img{
+  max-width: 12rem;
+  vertical-align: middle;
+}
+
+.number-count{
+  color: var(--blue);
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  right: 0;
+}
+
+.modal-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  margin-top: 40px;
 }
 
 .close{
-  color: red;
-  float: right;
+  color: black;
   font-size: 28px;
   font-weight: bold;
+  float: right;
+  padding: 20px;
 }
 
 .close:hover, .close:focus{
-  color: green;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -522,6 +631,7 @@ main{
 .education-page h1{
   font-size: 2rem;
   margin-bottom: 40px;
+  color: var(--blue);
 }
 
 .educ-container{
@@ -572,6 +682,7 @@ main{
 .contact-page h1 {
   font-size: 2rem;
   margin-bottom: 40px;
+  color: var(--blue);
 }
 
 .contacts{
