@@ -12,22 +12,24 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="index.html"><img src="/src/assets/images/self-logo.png" alt=""></a>
-      </div>
-      <div class="nav-links">
-        <nav>
-            <ul>
-              <!-- <li><a href="">Home</a></li> -->
-              <li><a href="#about-page-id">ABOUT</a></li>
-              <li><a href="#skills-page-id">SKILLS</a></li>
-              <li><a href="#experience-page-id">EXPERIENCE</a></li>
-              <li><a href="#projects-page-id">PROJECTS</a></li>
-              <li><a href="#education-page-id">EDUCATION</a></li>
-              <li><a href="#contact-page-id">CONTACT</a></li> 
-            </ul>
-        </nav>
-      </div>
+     <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="/src/assets/images/self-logo.png" alt=""></a>
+        </div>
+        <div class="nav-links">
+          <nav>
+              <ul>
+                <!-- <li><a href="">Home</a></li> -->
+                <li><a href="#about-page-id">ABOUT</a></li>
+                <li><a href="#skills-page-id">SKILLS</a></li>
+                <li><a href="#experience-page-id">EXPERIENCE</a></li>
+                <li><a href="#projects-page-id">PROJECTS</a></li>
+                <li><a href="#education-page-id">EDUCATION</a></li>
+                <li><a href="#contact-page-id">CONTACT</a></li> 
+              </ul>
+          </nav>
+        </div>
+     </div>
     </header>
     <main>
       <section class="welcome-page" id="welcome-page-id">
@@ -227,21 +229,26 @@
       <section class="projects-page" id="projects-page-id">
         <h1>PROJECTS</h1>
         <div class="projects-container">
-          <div class="projects-left project">
-            <div class="modal-thumbnail" id="modal-thumbnail-id">
+          
+          <div class="projects-1 project">
+            <div class="modal-thumbnail" data-modal="modal-id">
               <img src="/src/assets/images/design-project1.png" alt="" class="project-design">
             </div>
             <div class="modal-desc">
               <h4>Mobile UI Design</h4>
               <p>Food Expiration Tracker</p>
-              <p>Short Description</p>
+              <p>School Project</p>
             </div>
             <div class="modal" id="modal-id">
               <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="modal-info">
-                  <div class="modal-left">
-                    <div class="carousel-container">
+                  <div class="modal-left" data-slide-class="mySlides">
+                    <div class="disc">DISCLAIMER: The assets used in the design is free-to-use. These assets have been sourced from different platforms that provide resources under free licenses.</div>
+                    <div class="carousel-container" data-carousel="1">
+                      <div class="mySlides">
+                        <img src="/src/assets/images/design-project1.png" alt="" id="thumbnail">
+                      </div>
                       <div class="mySlides">
                         <img src="/src/assets/images/Home Page.png" alt="">
                       </div>
@@ -281,21 +288,21 @@
                       <div class="mySlides">
                         <img src="/src/assets/images/Add Food and Scan.png" alt="" class="all-img">
                       </div>
-                      <a class="prev"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a class="prev"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 9L8 12M8 12L11 15M8 12H16M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.07989 20 7.2 20Z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" id="prev-icon"/>
                         </svg></a>
-                      <a class="next"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a class="next"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 15L16 12M16 12L13 9M16 12H8M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.07989 20 7.2 20Z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg></a>
                     </div>
-                    <div class="counter">
-                      <!-- 1/3 -->
-                    </div>
+                    <div class="counter"></div>
+
                   </div>
                   <div class="modal-right">
                     <div class="top">
                       <h1>Food Expiration Tracker</h1>
                       <p>Mobile UI Design</p>
+                      <p>School Project</p>
                     </div>
                     <div class="middle">
                       <p>This design is created for a school project in our subject Technopreneurship. We, students are tasked with creating a ideation table and one of the requirements is to create a mobile design based on our choosen topic. This task involves finding solution to a specific problem related to Sustainable Development Goals.
@@ -305,8 +312,10 @@
                     <div class="bottom">
                       <p>Technologies</p>
                       <div class="modal-techs">
-                        <img src="/src/assets/icons/figma logo.svg" alt="">
-                        <p>Figma</p>
+                        <div class="tech">
+                          <img src="/src/assets/icons/figma logo.svg" alt="">
+                          <p>Figma</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -315,31 +324,164 @@
             </div>
           </div>
 
-          <!-- <div class="projects-right project">
-            <div class="modal-thumbnail" id="modal-thumbnail-id">
-              <img src="/src/assets/images/design-project1.png" alt="" class="project-design">
+          <div class="projects-2 project">
+            <div class="modal-thumbnail" data-modal="modal-id2">
+              <img src="/src/assets/images/Creomap C Version.png" alt="" class="project-design">
             </div>
             <div class="modal-desc">
-              <h4>Type of Design</h4>
-              <p>Title</p>
-              <p>Short Description</p>
+              <h4>Mobile UI Design</h4>
+              <p>CREOMAP Region 4</p>
+              <p>On-The-Job Training Requirement</p>
             </div>
-          </div>
-          <div class="modal" id="modal-id">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="modal-info">
-                <div class="modal-left">
-                  <p>Carousel</p>
-                </div>
-                <div class="modal-right">
-                  <h1>Title</h1>
-                  <p>Description</p>
-                  <p>Technologies</p>
+            <div class="modal" id="modal-id2">
+              <div class="modal-content2">
+                <span class="close">&times;</span>
+                <div class="modal-info2">
+                  <div class="modal-left" data-slide-class="mySlides2">
+                    <div class="disc">DISCLAIMER: The assets used in the design is free-to-use. The company logos used is for portfolio purpose only, showing the work completed during my time as a student intern.</div>
+                    <div class="carousel-container" data-carousel="2">
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/Creomap C Version.png" alt="" id="thumbnail">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP2.png" alt="">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP3.png" alt="">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP4.png" alt="">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP5.png" alt="">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP6.png" alt="">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP7.png" alt="">
+                      </div>
+                      <div class="mySlides2">
+                        <img src="/src/assets/images/CMAP8.png" alt="">
+                      </div>
+                      <a class="prev"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 9L8 12M8 12L11 15M8 12H16M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.07989 20 7.2 20Z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" id="prev-icon"/>
+                        </svg></a>
+                      <a class="next"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 15L16 12M16 12L13 9M16 12H8M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.07989 20 7.2 20Z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></a>
+                    </div>
+                    <div class="counter"> </div>
+  
+                  </div>
+                  <div class="modal-right">
+                    <div class="top">
+                      <h1>CREOMAP Region 4</h1>
+                      <p>Mobile UI Design</p>
+                      <p>On-The-Job Training Requirement</p>
+                    </div>
+                    <div class="middle">  
+                      <p>The design is created for a requirement for our On-The-Job Training that is conducted by CREOTEC Philippines Inc. during the pandemic. The trainees are tasked to create a mobile application with the use of Unity Engine. The mobile application named Creomap Region IVA (this is the region we're assigned) is developed for users to search for a school in a specific location based on the data that was gathered. I was assigned to be the designer in our group and part of is to make a design for the application.
+                        <br><br><br>
+                        Besides the mobile application requirement in our On-The-Job Traning, There are things and experiences that I've learned in my On-The-Job Training with CREOTEC Philippines Inc. First, I learned being punctual during my time in my training because even it is during pandemic, everyday we are required for a daily time report that is one of the requirement in our training. Second, I improved my communcation skills because I need to communicate to other students not just from my school but at the same time with other students from other schools also. Third, I learned being composed because even that I realized there are a lot of activities to do (ex: daily tasks, online discussion, doing the final output) and it also helps me to be more productive. Lastly, one of the most memorable thing that I've learned in my training that I think i can also apply in working experience is the application of 5S. 5S is a 5-step methodology that uses a list of five Japanese Words, to maintain a well organized and productive workplace. </p>
+                    </div>
+                    <div class="bottom">
+                      <p>Technologies</p>
+                      <div class="modal-techs">
+                        <div class="tech">
+                          <img src="/src/assets/icons/figma logo.svg" alt="">
+                          <p>Figma</p>
+                        </div>
+                        <div class="tech">
+                          <img src="/src/assets/icons/canva logo colored.svg" alt="">
+                          <p>Canva</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
+
+          <div class="projects-3 project">
+            <div class="modal-thumbnail" data-modal="modal-id3">
+              <img src="/src/assets/images/twPage.png" alt="">
+            </div>
+            <div class="modal-desc">
+              <h4>Web Design</h4>
+              <p>Performance Evaluation Website</p>
+              <p>Thesis Project Output</p>
+            </div>
+            <div class="modal" id="modal-id3"> 
+              <div class="modal-content3">
+                <span class="close">&times;</span>
+                <div class="modal-info3">
+                  <div class="modal-left" data-slide-class="mySlides3">
+                    <div class="disc">DISCLAIMER: The assets used in the design is free-to-use. The school logo and school name used is for portfolio purpose only, showing where i completed my thesis project. The data or information used here are intended for illustrative purposes only.</div>
+                    <div class="carousel-container" data-carousel="3">
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Welcoming Page.png" alt="">
+                      </div>
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Register Page.png" alt="">
+                      </div>
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Student Dashboard Page.png" alt="">
+                      </div>
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Student Evaluation Page.png" alt="" class="sep-img">
+                      </div>
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Admin Page.png" alt="">
+                      </div>
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Admin Dashboard Page.png" alt="" class="adp-img">
+                      </div>
+                      <div class="mySlides3">
+                        <img src="/src/assets/images/Admin Register.png" alt="">
+                      </div>
+                      <a class="prev"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 9L8 12M8 12L11 15M8 12H16M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.07989 20 7.2 20Z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" id="prev-icon"/>
+                        </svg></a>
+                      <a class="next"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 15L16 12M16 12L13 9M16 12H8M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.07989 20 7.2 20Z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></a>
+                    </div>
+                    <div class="counter"></div>
+                  </div>
+                  <div class="modal-right">
+                    <div class="top">
+                      <h1>Performance Evaluation Website</h1>
+                      <p>Web Design</p>
+                      <p>Thesis Project Output</p>
+                    </div>
+                    <div class="middle">
+                      <p>This website design is used for our thesis project. The proposed thesis is about the analysis of performance evaluation of the faculty members. The study aims to use classification technique algorithms to achieve the intended objective. The website output is designed and created that gives students a way to provide feedback on a professor's performance to generate data.
+                      <br><br><br>  
+                      The design and development of the thesis idea aim to improve the  the evaluation process of faculty performance to ensure the quality of education, as one of the methods to evaluate the performance of faculty members is by the students' feedback. The design used is inspired from the colors representing the school, and all the items shown are for example purposes only and not exactly what the evaluation form directly from the school. On the development side, by conducting sentiment analysis and using classification algorithms, not just the given criteria will be used but also the comments will be a factor in knowing each of the students' responses to know if their comments are positive, negative, or neutral. The study also used nlp or natural language processing to filter out words from the comments of each students and use other technqiues such as word2vec to filter words and evaluated the algorithm models using performance metrics.
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <p>Technologies</p>
+                      <div class="modal-techs">
+                        <div class="tech">
+                          <img src="/src/assets/icons/figma logo.svg" alt="">
+                          <p>Figma</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-4 project">
+            <div class="modal-thumbnail" data-modal="modal-id3">
+              <img src="" alt="">
+            </div>
+          </div>
           
         </div>
       </section>
@@ -352,8 +494,8 @@
               <img src="/src/assets/images/college-logo.png" alt="">
             </div>
             <div class="educ-info">
-              <p>Degree:
-              Bachelor of Science in Computer Science</p>
+              <p>Degree:</p>
+              <p>Bachelor of Science in Computer Science</p>
               <p>2019-2023</p>
               <p>Batangas State University (Lipa)</p>
             </div>
@@ -363,10 +505,10 @@
               <img src="/src/assets/images/shs-logo.png" alt="">
             </div>
             <div class="educ-info">
-              <p>Strand:
-              Science, Technology, Engineering, and Mathematics</p>
-              <p>2019-2023</p>
-              <p></p>Batangas State University (Lipa)</p>
+              <p>Degree:</p>
+              <p>Science, Technology, Engineering, and Mathematics</p>
+              <p>2012-2019</p>
+              <p>LCC Silvercrest Senior Highschool</p>
             </div>
           </div>
         </div>
@@ -389,7 +531,14 @@
         <div class="contacts">
           <div class="first-contact contact-detail">
             <div class="contact-logo">
-              <img src="/src/assets/icons/email-logo.svg" alt="">
+              <svg width="48px" height="48px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -922.000000)" fill="">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path d="M262,764.291 L254,771.318 L246,764.281 L246,764 L262,764 L262,764.291 Z M246,775 L246,766.945 L254,773.98 L262,766.953 L262,775 L246,775 Z M244,777 L264,777 L264,762 L244,762 L244,777 Z" id="email-[#1573]">
+                  </path>
+                  </g>
+                  </g>
+              </svg>
             </div>
             <div class="contact-info">
               <p>Send me an email:</p>
@@ -398,16 +547,30 @@
           </div>
           <div class="second-contact contact-detail">
             <div class="contact-logo">
-              <img src="/src/assets/icons/linkedin-logo.svg" alt="">
+              <svg width="48px" height="48px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -7479.000000)" fill="">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z" id="linkedin-[#161]">
+                  </path>
+                  </g>
+                  </g>
+              </svg>
             </div>
             <div class="contact-info">
               <p>My Linkedln Account</p>
               <h4>/in/cieldeanvarias</h4>
             </div>
           </div>
-          <div class="second-contact contact-detail">
+          <div class="third-contact contact-detail">
             <div class="contact-logo">
-              <img src="/src/assets/icons/fb-logo.svg" alt="">
+              <svg width="48px" height="48px" viewBox="-5 0 15 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill=" ">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]">
+                  </path>
+                  </g>
+                  </g>
+              </svg>
             </div>
             <div class="contact-info">
               <p>My Facebook Account</p>
@@ -425,14 +588,13 @@
         <div class="footer-center">
           <p><i>Once again, Welcome to my Portfolio!</i></p>
         </div>
-        <span>
-          <div class="footer-right">
+        
+          <span>
             <button class = "gotopbtn" id="gotopbtn-id">↑</button>
-          </div>
-        </span>
+          </span>
       </div>
       <div class="footer-copyright">
-        <small>©</small>2024 by Ciel Dean Varias
+        <p><small>©</small>2024 by Ciel Dean Varias</p>
       </div>
     </footer>
     <script src="main.js"></script>
