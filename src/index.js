@@ -4,6 +4,7 @@ const rootElement = document.documentElement;
 // const modal = document.getElementById("modal-id");
 const modalBtns = document.querySelectorAll(".modal-thumbnail");
 const closeBtns = document.querySelectorAll(".close");
+const closeBtns2 = document.querySelectorAll(".close2")
 
 const navbar = document.querySelector("header");
 
@@ -100,8 +101,17 @@ function closeModal(e){
     document.body.style.overflow = "";
 
     const carouselElement = modal.querySelector(".modal-left");
-    const slideClass = carouselElement.getAttribute("data-slide-class");
-    resetSlides(carouselElement,slideClass);
+    const carouselElement2 = modal.querySelector(".modal-single");
+    if (carouselElement) {
+      const slideClass = carouselElement.getAttribute("data-slide-class");
+      resetSlides(carouselElement, slideClass);
+    }
+    
+    if (carouselElement2) {
+      const slideClass2 = carouselElement2.getAttribute("data-slide-class");
+      resetSlides(carouselElement2, slideClass2);
+    }
+   
 }
 
 // Function to close the modal when clicking outside of it
@@ -114,9 +124,17 @@ function outsideModal(e) {
         document.querySelector(".navbar").classList.remove("navbar-hidden");
         document.body.style.overflow = "";
 
-        const carouselElement = modal.querySelector(".modal-left");
-        const slideClass = carouselElement.getAttribute("data-slide-class");
-        resetSlides(carouselElement,slideClass);
+    const carouselElement = modal.querySelector(".modal-left");
+    const carouselElement2 = modal.querySelector(".modal-single");
+    if (carouselElement) {
+      const slideClass = carouselElement.getAttribute("data-slide-class");
+      resetSlides(carouselElement, slideClass);
+    }
+    
+    if (carouselElement2) {
+      const slideClass2 = carouselElement2.getAttribute("data-slide-class");
+      resetSlides(carouselElement2, slideClass2);
+    }
 
         window.removeEventListener("click", outsideModal);
       }
@@ -136,10 +154,19 @@ closeBtns.forEach(closeBtn => {
     closeBtn.addEventListener("click", closeModal);
 })
 
+closeBtns2.forEach(closeBtn => {
+  closeBtn.addEventListener("click", closeModal);
+})
+
 document.querySelectorAll(".modal-left").forEach(carouselElement =>{
-  const slideClass = carouselElement.getAttribute("data-slide-class")
+  const slideClass = carouselElement.getAttribute("data-slide-class");
   initCarousel(carouselElement,slideClass);
 })
+
+document.querySelectorAll(".modal-single").forEach(carouselElement =>{
+  const slideClass = carouselElement.getAttribute("data-slide-class");
+  initCarousel(carouselElement, slideClass);
+});
 
 
 
