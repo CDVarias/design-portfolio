@@ -1,12 +1,16 @@
 const goTopBtn = document.getElementById("gotopbtn-id");
 const rootElement = document.documentElement;
 
-// const modal = document.getElementById("modal-id");
 const modalBtns = document.querySelectorAll(".modal-thumbnail");
 const closeBtns = document.querySelectorAll(".close");
 const closeBtns2 = document.querySelectorAll(".close2")
 
 const navbar = document.querySelector("header");
+const topNav = document.getElementById("topnav-icon-id");
+
+const mobileNav = document.getElementById("mobile-nav-id");
+let openedMobileNav = false;
+const mobileNavLinks = document.querySelectorAll(".mobile-nav-links a");
 
 function initCarousel(carouselElement,slideClass){
   const slides = carouselElement.querySelectorAll(`.${slideClass}`);
@@ -92,9 +96,9 @@ function openModal(event) {
   }
 
 
-function closeModal(e){
-    // for x button in the modal
-    const modal = e.currentTarget.closest(".modal")
+function closeModal(event){
+    // for close button in the modal
+    const modal = event.currentTarget.closest(".modal")
     modal.style.display = "none";
     goTopBtn.style.display = "";
     document.querySelector(".navbar").classList.remove("navbar-hidden");
@@ -114,11 +118,10 @@ function closeModal(e){
    
 }
 
-// Function to close the modal when clicking outside of it
-function outsideModal(e) {
+function outsideModal(event) {
     const modals = document.querySelectorAll(".modal");
     modals.forEach(modal => {
-      if (e.target === modal) {
+      if (event.target === modal) {
         modal.style.display = "none";
         goTopBtn.style.display = "";
         document.querySelector(".navbar").classList.remove("navbar-hidden");
@@ -141,16 +144,38 @@ function outsideModal(e) {
     });
   }
 
-document.addEventListener("scroll", handleScroll)
-goTopBtn.addEventListener("click", goTop)
+function openMobilenav(){
+  openedMobileNav = !openedMobileNav;
+  if (openedMobileNav){
+    mobileNav.style.display = "flex";
+    document.body.style.overflowY = "hidden";
+  }
+  else{
+    mobileNav.style.display = "none";
+    document.body.style.overflowY = "auto";
+  }
+}
+
+function openMobileNavLinks(){
+  openedMobileNav = false;
+  mobileNav.style.display = "none";
+  document.body.style.overflowY = "auto";
+}
+
+document.addEventListener("scroll", handleScroll);
+goTopBtn.addEventListener("click", goTop);
+
+topNav.addEventListener("click", openMobilenav);
+
+mobileNavLinks.forEach(linkBtn =>{
+  linkBtn.addEventListener("click", openMobileNavLinks)
+})
 
 modalBtns.forEach(modalBtn =>{
     modalBtn.addEventListener("click", openModal)
 })
 
-// Iterate through all elements that have the class "closeBtn"
 closeBtns.forEach(closeBtn => {
-    // For each close button, add an event listener that listens for the "click event" and then call the closeModal function
     closeBtn.addEventListener("click", closeModal);
 })
 
@@ -166,7 +191,9 @@ document.querySelectorAll(".modal-left").forEach(carouselElement =>{
 document.querySelectorAll(".modal-single").forEach(carouselElement =>{
   const slideClass = carouselElement.getAttribute("data-slide-class");
   initCarousel(carouselElement, slideClass);
-});
+})
+
+
 
 
 

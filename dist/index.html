@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-     <div class="navbar">
+     <div class="navbar container">
         <div class="logo">
           <a href="index.html"><img src="/src/assets/images/self-logo.png" alt=""></a>
         </div>
@@ -20,19 +20,45 @@
           <nav>
               <ul>
                 <!-- <li><a href="">Home</a></li> -->
-                <li><a href="#about-page-id">ABOUT</a></li>
-                <li><a href="#skills-page-id">SKILLS</a></li>
-                <li><a href="#experience-page-id">EXPERIENCE</a></li>
-                <li><a href="#projects-page-id">PROJECTS</a></li>
-                <li><a href="#education-page-id">EDUCATION</a></li>
-                <li><a href="#contact-page-id">CONTACT</a></li> 
+                <li><a href="#about-page-id">About</a></li>
+                <li><a href="#skills-page-id">Skills</a></li>
+                <li><a href="#experience-page-id">Experience</a></li>
+                <li><a href="#projects-page-id">Projects</a></li>
+                <li><a href="#education-page-id">Education</a></li>
+                <li><a href="#contact-page-id">Contact</a></li>
               </ul>
           </nav>
         </div>
+        <div class="topnav" id="topnav-id">
+          <button class="topnav-icon" id="topnav-icon-id">
+            <svg class="topnav-svgicon" width="24" height="24" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.9375 6.3125H36.0625C36.7874 6.3125 37.375 5.75289 37.375 5.0625V1.9375C37.375 1.24711 36.7874 0.6875 36.0625 0.6875H1.9375C1.21259 0.6875 0.625 1.24711 0.625 1.9375V5.0625C0.625 5.75289 1.21259 6.3125 1.9375 6.3125ZM1.9375 18.8125H36.0625C36.7874 18.8125 37.375 18.2529 37.375 17.5625V14.4375C37.375 13.7471 36.7874 13.1875 36.0625 13.1875H1.9375C1.21259 13.1875 0.625 13.7471 0.625 14.4375V17.5625C0.625 18.2529 1.21259 18.8125 1.9375 18.8125ZM1.9375 31.3125H36.0625C36.7874 31.3125 37.375 30.7529 37.375 30.0625V26.9375C37.375 26.2471 36.7874 25.6875 36.0625 25.6875H1.9375C1.21259 25.6875 0.625 26.2471 0.625 26.9375V30.0625C0.625 30.7529 1.21259 31.3125 1.9375 31.3125Z" fill="white"/>
+            </svg>
+          </button>
+        </div>
      </div>
     </header>
+
+    <div class="mobile-nav" id="mobile-nav-id">
+      <div class="mobile-nav-links">
+        <nav>
+          <ul>
+            <li><a href="#about-page-id">About</a></li>
+            <li><a href="#skills-page-id">Skills</a></li>
+            <li><a href="#experience-page-id">Experience</a></li>
+            <li><a href="#projects-page-id">Projects</a></li>
+            <li><a href="#education-page-id">Education</a></li>
+            <li><a href="#contact-page-id">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-nav-bgimg">
+        <img src="/src/assets/images/Self Portrait Logo Design.png" alt="">
+      </div>
+    </div>
+
     <main>
-      <section class="welcome-page" id="welcome-page-id">
+      <section class="welcome-page container" id="welcome-page-id">
         <div class="first-heading">
           <h1>Hello, I am <span>Ciel Dean!</span></h1>
         </div>
@@ -48,7 +74,7 @@
           </div>
         </div>
       </section>
-      <section class="about-page" id="about-page-id">
+      <section class="about-page container" id="about-page-id">
         <div class="about-title">
           <h1>ABOUT</h1>
         </div>
@@ -64,7 +90,7 @@
           </div>
         </div>
       </section>
-      <section class="skills-page" id="skills-page-id">
+      <section class="skills-page container" id="skills-page-id">
         <div class="skill-title">
           <h1>SKILLS</h1>
           <p>Technologies and Tools</p>
@@ -152,10 +178,10 @@
           </ul>
         </div>
       </section>
-      <section class="experience-page" id="experience-page-id">
+      <section class="experience-page container" id="experience-page-id">
         <h1>EXPERIENCE</h1>
         <div class="timeline">
-          <div class="container left">
+          <div class="container-exp left">
             <div class="content">
               <div class="first-content">
                 <h4>Student Intern</h4>
@@ -191,7 +217,7 @@
             </div>
           </div>
           
-          <div class="container right">
+          <div class="container-exp right">
             <div class="logo-container logo-left">
               <img src="/src/assets/images/creo-logo.png" alt="">
             </div>
@@ -226,7 +252,7 @@
 
         </div>
       </section>
-      <section class="projects-page" id="projects-page-id">
+      <section class="projects-page container" id="projects-page-id">
         <h1>PROJECTS</h1>
         <div class="projects-container">
           
@@ -641,7 +667,7 @@
         </div>
       </section>
 
-      <section class="education-page" id="education-page-id">
+      <section class="education-page container" id="education-page-id">
         <h1>EDUCATION</h1>
         <div class="educ-container">
           <div class="educ-left">
@@ -681,7 +707,7 @@
         </div>
       </section> -->
 
-      <section class="contact-page" id="contact-page-id">
+      <section class="contact-page container" id="contact-page-id">
         <h1>CONTACT</h1>
         <div class="contacts">
           <div class="first-contact contact-detail">
@@ -736,21 +762,23 @@
       </section>
     </main>
     <footer>
-      <div class="footer">
-        <div class="footer-left">
-          <img src="/src/assets/images/self-logo.png" alt="">
+      <div class="footer-container container">
+        <div class="footer">
+          <div class="footer-left">
+            <img src="/src/assets/images/self-logo.png" alt="">
+          </div>
+          <div class="footer-center">
+            <p><i>Once again, Welcome to my Portfolio!</i></p>
+          </div>
+          <span>testingtesting</span>
         </div>
-        <div class="footer-center">
-          <p><i>Once again, Welcome to my Portfolio!</i></p>
+        <div class="footer-copyright">
+          <p><small>©</small>2024 by Ciel Dean Varias</p>
         </div>
-        
-          <span>
-            <button class = "gotopbtn" id="gotopbtn-id">↑</button>
-          </span>
       </div>
-      <div class="footer-copyright">
-        <p><small>©</small>2024 by Ciel Dean Varias</p>
-      </div>
+      <span>
+        <button class = "gotopbtn" id="gotopbtn-id">↑</button>
+      </span>
     </footer>
     <script src="main.js"></script>
   </body>
