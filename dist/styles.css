@@ -83,12 +83,12 @@ body{
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid red;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  border: 1px solid red;
 }
 
-/*_________________ Header Section _________________*/
+/*_________________ HEADER SECTION _________________*/
 
 header{
   background: var(--airforce-blue);
@@ -229,7 +229,6 @@ header{
     gap: 2rem;
   }
 
-
 }
 
 @media screen and (max-width: 768px){
@@ -260,10 +259,10 @@ header{
 }
 
 main{
-  /* max-width: 170ch; */
   width: 100%;
   margin-inline: auto;
 }
+
 
 /*_________________ WELCOME SECTION __________________ */
 
@@ -272,10 +271,11 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   gap: 20px;
   color: var(--platinum-white);
+  margin-bottom: 10em;
 }
 
 .heading-buttons{
@@ -320,6 +320,7 @@ main{
   color: var(--blue);
 }
 
+
 /* _________________ ABOUT SECTION _________________ */
 
 .about-page{
@@ -329,6 +330,7 @@ main{
   min-height: 80vh;
   width: 100%;
   gap: 40px;
+  margin-bottom: 10em;
 }
 
 .about-title h1 {
@@ -376,6 +378,7 @@ main{
   flex-direction: column;
   min-height: 80vh;
   width: auto;
+  margin-bottom: 10em;
 }
 
 .skill-title{
@@ -444,6 +447,7 @@ main{
   width: auto;
   gap: 40px;
   margin-inline: auto;
+  margin-bottom: 10em;
 }
 
 .experience-page h1{
@@ -627,6 +631,7 @@ main{
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 10em;
 }
 
 .projects-page > h1{
@@ -636,10 +641,11 @@ main{
 
 .projects-container{
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
   flex-wrap: wrap;
-  row-gap: 10em;
+  row-gap: 5em;
 }
 
 .modal-thumbnail{
@@ -906,14 +912,6 @@ main{
   max-width: 50ch;
 }
 
-/* .number-count{
-  color: var(--blue);
-  font-size: 20px;
-  padding: 8px 12px;
-  position: absolute;
-  right: 0;
-} */
-
 [class^="modal-right"]{
   display: flex;
   flex-wrap: wrap;
@@ -1047,11 +1045,13 @@ main{
   cursor: pointer;
 }
 
+
 /* _________________ EDUCATION SECTION _________________ */
 
 .education-page{
   min-height: 60vh;
   width: 100%;
+  margin-bottom: 10em;
 }
 
 .education-page h1{
@@ -1082,7 +1082,7 @@ main{
 }
 
 .educ-logo img{
-  max-width: 8rem;
+  max-width: 8em;
   width: 100%;
   padding: 10px;
 }
@@ -1118,6 +1118,7 @@ main{
 .contact-page{
   min-height: 40vh;
   width: 100%;
+  margin-bottom: 10em;
 }
 
 .contact-page h1 {
