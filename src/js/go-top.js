@@ -1,14 +1,14 @@
 export const goTopBtn = document.getElementById("gotopbtn-id");
 const rootElement = document.documentElement;
 
-export function goTop(){
+function goTop(){
     rootElement.scrollTo({
         top:0,
         behavior: "smooth"
     })
 }
 
-export function handleScroll(){
+function handleScroll(){
     // this checks the total height you scrolled
     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
     if((rootElement.scrollTop / scrollTotal) > 0.50){

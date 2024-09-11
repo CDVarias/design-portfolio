@@ -1,5 +1,4 @@
 
-import {goTop,handleScroll} from './js/go-top.js';
 import { goTopBtn } from './js/go-top.js';
 
 const modalBtns = document.querySelectorAll(".modal-thumbnail");
