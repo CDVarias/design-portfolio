@@ -1,5 +1,6 @@
-const goTopBtn = document.getElementById("gotopbtn-id");
-const rootElement = document.documentElement;
+
+import {goTop,handleScroll} from './js/go-top.js';
+import { goTopBtn } from './js/go-top.js';
 
 const modalBtns = document.querySelectorAll(".modal-thumbnail");
 const closeBtns = document.querySelectorAll(".close");
@@ -47,26 +48,6 @@ function initCarousel(carouselElement,slideClass){
 
   prevButton.addEventListener("click", () => plusSlides(-1));
   nextButton.addEventListener("click", () => plusSlides(1));
-}
-
-function goTop(){
-    rootElement.scrollTo({
-        top:0,
-        behavior: "smooth"
-    })
-}
-
-function handleScroll(){
-    // this checks the total height you scrolled
-    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-    if((rootElement.scrollTop / scrollTotal) > 0.50){
-        // show button
-        goTopBtn.classList.add("showBtn")
-    }
-    else {
-        // hide button
-        goTopBtn.classList.remove("showBtn")
-    }
 }
 
 function resetSlides(carouselElement, slideClass){
@@ -162,8 +143,6 @@ function openMobileNavLinks(){
   document.body.style.overflowY = "auto";
 }
 
-document.addEventListener("scroll", handleScroll);
-goTopBtn.addEventListener("click", goTop);
 
 topNav.addEventListener("click", openMobilenav);
 
