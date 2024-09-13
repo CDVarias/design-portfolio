@@ -9,18 +9,17 @@ function goTop(){
 }
 
 function handleScroll(){
-    // this checks the total height you scrolled
     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
     if((rootElement.scrollTop / scrollTotal) > 0.50){
-        // show button
         goTopBtn.classList.add("showBtn")
     }
     else {
-        // hide button
         goTopBtn.classList.remove("showBtn")
     }
 }
 
-document.addEventListener("scroll", handleScroll);
-goTopBtn.addEventListener("click", goTop);
+export function initGoTopButton(){
+    document.addEventListener("scroll", handleScroll);
+    goTopBtn.addEventListener("click", goTop);
+}
 
