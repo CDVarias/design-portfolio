@@ -1,0 +1,73 @@
+.education-page{
+    min-height: 60vh;
+    margin-bottom: 10em;
+  }
+  
+  .education-page h1{
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--blue);
+  }
+  
+  .educ-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .educ-left, .educ-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .educ-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gold);
+    border-radius: 20px;
+  }
+  
+  .educ-logo img{
+    max-width: 8em;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .educ-info p:nth-of-type(1), .educ-info p:nth-of-type(3){
+    color: var(--platinum-white);
+    font-size: var(--size-lg);
+  }
+  
+  .educ-info p:nth-of-type(2){
+    margin-bottom: 1em;
+  }
+  
+  .educ-info p:nth-of-type(2), .educ-info p:nth-of-type(4){
+    font-size: var(--size-xl);
+    color: var(--blue);
+  }
+  
+  @media screen and (max-width: 1024px){
+    .educ-container{
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      align-items: flex-start;
+    }
+  }
+  
+  @media screen and (max-width: 640px){
+    .educ-left,.educ-right{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  
+    .educ-logo{
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

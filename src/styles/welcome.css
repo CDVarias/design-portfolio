@@ -1,0 +1,88 @@
+.welcome-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+    color: var(--platinum-white);
+    margin-bottom: 10em;
+  }
+  
+  .heading-buttons{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .heading-buttons div button {
+    padding: 10px;
+    background-color: var(--airforce-blue);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: var(--size-xl);
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .heading-buttons button a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .heading-buttons div button:hover{
+    transform: scale(1.2);
+    background-color: var(--gold);
+  } 
+  
+  
+  .first-heading h1{
+    font-size: var(--size-7xl);
+    text-align: center;
+  }
+  
+  .second-heading h3{
+    font-size: var(--size-4xl);
+    text-align: center;
+  }
+  
+  .first-heading h1 span {
+    color: var(--blue);
+  }
+  
+  @media screen and (max-width:1024px){
+    .first-heading h1{
+      font-size: var(--size-6xl);
+    }
+    .second-heading h3{
+      font-size: var(--size-3xl);
+    }
+    .heading-buttons div button {
+      font-size: var(--size-lg);
+    }
+  }
+  
+  @media screen and (max-width: 768px){
+    .first-heading h1{
+      font-size: var(--size-5xl);
+    }
+    .second-heading h3{
+      font-size: var(--size-2xl);
+    }
+    .heading-buttons div button {
+      font-size: var(--size-base);
+    }
+  }
+  
+  @media screen and (max-width: 640px){
+    .first-heading h1{
+      font-size: var(--size-4xl);
+    }
+    .second-heading h3{
+      font-size: var(--size-xl);
+    }
+  }
+  
