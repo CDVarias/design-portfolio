@@ -12,10 +12,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader',
+          "style-loader",
+          "css-loader",
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|pdf)$/i,
+        type: 'asset/resource',
+      },
     ],
+  },
+  devServer: {
+    static: path.resolve(__dirname, 'dist'),
+    port: 8080,
+    open: true,
+    hot: true,
+    compress: true,
   },
 };

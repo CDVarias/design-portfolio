@@ -1,51 +1,51 @@
-.contact-page{
-    min-height: 40vh;;
-    margin-bottom: 10em;
-  }
-  
-  .contact-page h1 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--blue);
-  }
-  
-  .contacts{
-    display: flex;
-    align-items: center;
+.contact-page {
+  min-height: 30vh;
+  margin-bottom: 10em;
+}
+
+.contact-page h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--blue);
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-logo svg {
+  max-width: 3rem;
+}
+
+.first-contact svg {
+  fill: var(--blue);
+}
+
+.second-contact svg {
+  fill: var(--linked-in-blue);
+}
+
+.third-contact svg {
+  fill: var(--fb-blue);
+}
+
+.contact-info {
+  color: var(--platinum-white);
+  font-size: var(--size-lg);
+}
+
+@media screen and (max-width: 1024px) {
+  .contacts {
     justify-content: space-between;
-    gap: 15px;
+    flex-wrap: wrap;
   }
-  
-  .contact-detail{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .contact-logo svg{
-    max-width: 3rem;
-  }
-  
-  .first-contact svg{
-    fill: var(--blue);
-  }
-  
-  .second-contact svg{
-    fill: var(--linked-in-blue);
-  }
-  
-  .third-contact svg{
-    fill: var(--fb-blue);
-  }
-  
-  .contact-info{
-    color: var(--platinum-white);
-    font-size: var(--size-lg);
-  }
-  
-  @media screen and (max-width: 1024px){
-    .contacts{
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  }
+}

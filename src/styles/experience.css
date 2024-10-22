@@ -1,238 +1,255 @@
-.experience-page{
-    display: flex;
-    flex-direction: column;
-    min-height: 160vh;
-    gap: 40px;
-    margin-inline: auto;
-    margin-bottom: 10em;
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 160vh;
+  gap: 40px;
+  margin-inline: auto;
+  margin-bottom: 10em;
+}
+
+.experience-page h1 {
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+/* the timeline (need ng relative position ng container for the ruler mismo) */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  z-index: 0;
+}
+
+/* the actual timeline (ruler mismo) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  background-color: var(--blue);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+/* the container (container para dun sa circles tyaka dun sa content mismo para kapag nagadd ng another set of info may circle din kasama */
+.container-exp {
+  position: relative;
+  width: auto;
+  z-index: 1;
+}
+
+/* the actual container (circles mismo) */
+.container-exp::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  min-height: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gold);
+  border-radius: 50%;
+  top: 0;
+  z-index: 1;
+}
+
+.container-exp.left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container-exp.right {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 50%;
+  color: var(--platinum-white);
+}
+
+.first-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.first-content p {
+  font-size: var(--size-xl);
+}
+
+.left .content {
+  flex: 1;
+}
+
+.right .content {
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.content h4 {
+  font-size: 1.5rem;
+}
+
+.second-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.second-content ul {
+  margin-left: 20px;
+  line-height: 2;
+  text-decoration: none;
+  font-size: var(--size-lg);
+}
+
+.third-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exp-tech ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  row-gap: 20px;
+}
+
+.exp-tech li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-tech img {
+  width: 5rem;
+}
+
+.exp-tech p {
+  font-size: var(--size-lg);
+}
+
+.exp-description {
+  width: 100%;
+  word-wrap: break-word;
+}
+.exp-description p {
+  text-align: justify;
+  font-size: var(--size-lg);
+}
+
+.logo-container.logo-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  padding-left: 7rem;
+}
+
+.logo-container.logo-left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex: 1;
+  padding-right: 3.6rem;
+}
+
+.logo-container img {
+  max-width: 6rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+  .exp-description p,
+  .second-content li {
+    font-size: var(--size-base);
   }
-  
-  .experience-page h1{
-    font-size: 2rem;
-    color: var(--blue);
+
+  .exp-tech img {
+    width: 3rem;
   }
-  
-  /* the timeline (need ng relative position ng container for the ruler mismo) */
-  .timeline{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    z-index: 0;
+
+  .exp-tech p {
+    font-size: var(--size-base);
   }
-  
-  /* the actual timeline (ruler mismo) */
-  .timeline::after{
-    content: '';
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .timeline::before {
+    content: "";
     position: absolute;
     width: 5px;
     background-color: var(--blue);
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 10px;
     transform: translateX(-50%);
     border-radius: 10px;
     z-index: 0;
   }
-  
-  /* the container (container para dun sa circles tyaka dun sa content mismo para kapag nagadd ng another set of info may circle din kasama */
-  .container-exp{
-    position: relative;
-    width: auto;
-    z-index: 1;
-  }
-  
-  /* the actual container (circles mismo) */
-  .container-exp::after{
-    content: '';
+
+  .container-exp::before {
+    content: "";
     position: absolute;
     width: 40px;
     min-height: 40px;
-    left: 50%;
+    left: 10px;
     transform: translateX(-50%);
     background-color: var(--gold);
     border-radius: 50%;
     top: 0;
     z-index: 1;
   }
-  
-  .container-exp.left{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+  .timeline::after,
+  .container-exp::after {
+    display: none;
   }
-  
-  .container-exp.right{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .content{
+
+  .container-exp.left,
+  .container-exp.right {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
-    max-width: 50%;
-    color: var(--platinum-white);
   }
-  
-  .first-content{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .first-content p{
-    font-size: var(--size-xl) ;
-  }
-  
-  .left .content{
-    flex: 1;
-  }
-  
-  .right .content{
+
+  .container-exp.left .content {
     margin-left: 2rem;
-    flex: 1;
   }
-  
-  .content h4 {
-    font-size: 1.5rem;
+
+  .logo-container {
+    order: 1;
   }
-  
-  .second-content{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+  .logo-container.logo-right {
+    padding-left: 2rem;
   }
-  
-  .second-content ul {
-    margin-left: 20px;
-    line-height: 2;
-    text-decoration: none;
-    font-size: var(--size-lg);
-  }
-  
-  .third-content{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .exp-tech ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    text-decoration: none;
-    text-align: center;
-    row-gap: 20px;
-  }
-  
-  .exp-tech li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .exp-tech img{
-    width: 5rem;
-  }
-  
-  .exp-tech p{
-    font-size: var(--size-lg);
-  }
-  
-  .exp-description{
-    width: 100%;
-    word-wrap: break-word;
-  }
-  .exp-description p{
-    text-align: justify;
-    font-size: var(--size-lg);
-  }
-  
-  .logo-container.logo-right{
-    display: flex;
+
+  .logo-container.logo-left {
     justify-content: flex-start;
-    align-items: flex-start;
-    flex: 1;
-    padding-left: 7rem;
+    padding-left: 2rem;
   }
-  
-  .logo-container.logo-left{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex: 1;
-    padding-right: 3.6rem;
-  }
-  
-  .logo-container img {
-    max-width: 6rem;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border-radius: 30%;
-  }
-  
-  @media screen and (max-width: 768px){
-    .content{
-      max-width: 100%;
-      order: 2;
-    }
-  
-    .timeline::before{
-      content: '';
-      position: absolute;
-      width: 5px;
-      background-color: var(--blue);
-      top: 0;
-      bottom: 0;
-      left: 10px;
-      transform: translateX(-50%);
-      border-radius: 10px;
-      z-index: 0
-    }
-  
-    .container-exp::before{
-      content: '';
-      position: absolute;
-      width: 40px;
-      min-height: 40px;
-      left: 10px;
-      transform: translateX(-50%);
-      background-color: var(--gold);
-      border-radius: 50%;
-      top: 0;
-      z-index: 1;
-    }
-  
-    .timeline::after, .container-exp::after{
-      display: none;
-    }
-  
-    .container-exp.left,.container-exp.right{
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .container-exp.left .content{
-     margin-left: 2rem; 
-    }
-  
-    .logo-container{
-      order: 1;
-    }
-  
-    .logo-container.logo-right{
-      padding-left: 2rem;
-    }
-  
-    .logo-container.logo-left{
-      justify-content: flex-start;
-      padding-left: 2rem;
-    }
-  }
+}
