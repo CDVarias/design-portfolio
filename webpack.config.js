@@ -7,7 +7,6 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    // assetModuleFilename: "assets/[name][ext]",
     clean: true,
   },
   module: {
@@ -19,10 +18,16 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+        generator: {
+          filename: "[name][ext]",
+        },
       },
       {
         test: /\.(png|jpe?g|gif|svg|pdf)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "assets/[path][name][ext]",
+        },
       },
     ],
   },
